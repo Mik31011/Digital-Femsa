@@ -35,3 +35,4 @@ Esta solución mejorada integra la gestión de errores y la seguridad de los dat
 
 
 Flujo de integracion continua (Opcional) 
+Se puede agregar un flujo de integracion continua contemplando el crecimiento de los puntos de venta con el fin de agregar nuevos 
