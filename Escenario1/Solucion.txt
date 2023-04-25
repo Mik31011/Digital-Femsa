@@ -1,0 +1,37 @@
+Extracción de datos:
+Identificar las sucursales y las direcciones por las que se conectara Spark.
+Utilizar SparkSQL con el conector JDBC para extraer datos de las bases de datos relacionales en cada punto de venta.
+Validar la calidad y consistencia de los datos extraídos durante el procesamiento de los DataFrames en Spark.
+Configurar trabajos de Spark para ejecutarse cada hora, extrayendo y consolidando la información en DataFrames agregando un campo nuevo que nos permita identificar la sucursal y un campo de corte de datos para saber a cuando pertenecen los datos.
+
+Almacenamiento centralizado de datos:
+Utilizar un almacén de datos en la nube, como Amazon Redshift o Google BigQuery ya que cuentan con cifrado de datos en reposo y en tránsito habilitado, ademas ofrecen una amplia escalabilidad, brindando la posibilidad de procesamiento clusterizado y consumo por API asi como una amplia comunidad y documentacion.
+Escribir los DataFrames en el almacén de datos centralizado utilizando los conectores apropiados proporcionados por Spark (por ejemplo, spark-redshift para Amazon Redshift).
+Establecer políticas de control de acceso y autenticación para restringir el acceso a los datos almacenados.
+
+Procesamiento y transformación de datos:
+Utilizar las capacidades de procesamiento de Apache Spark para transformar y enriquecer los DataFrames, como el cálculo de métricas clave y la identificación de tendencias.
+Utilizar SparkSQL para realizar consultas y análisis adicionales en los datos si es necesario.
+Implementar mecanismos de recuperación ante fallos, como la tolerancia a fallos y la replicación de datos en Apache Spark.
+
+Preparación de datos para visualización:
+Guardar los resultados del procesamiento y análisis en tablas en el almacén de datos centralizado, optimizadas para consultas de visualización.
+Como medida de seguridad para la informacion, habilitar el registro de auditoría para rastrear y monitorear el acceso y las acciones realizadas en los datos.
+
+Dashboard y visualización de datos:
+Utilizar una herramienta de visualización de datos como Tableau, ya que es la unica donde tengo experiencia.
+Conectar la herramienta de visualización al almacén de datos centralizado de manera segura, utilizando roles y permisos para garantizar que solo los usuarios autorizados puedan acceder a los datos.
+Crear dashboards interactivos y personalizados que muestren las métricas y tendencias clave para facilitar la toma de decisiones del comité de dirección.
+
+Supervisión, alertas y seguimiento de errores:
+Establecer mecanismos de supervisión para detectar errores o anomalías en tiempo real durante la extracción, transformación y carga de datos.
+Configurar alertas y notificaciones para informar al equipo de soporte o a los responsables del sistema cuando ocurran problemas.
+Registrar los errores y su contexto en un sistema de seguimiento de errores, como JIRA o GitHub Issues.
+
+Evaluación de riesgos y seguridad:
+Realizar evaluaciones periódicas de riesgos y seguridad en la solución implementada, identificando y mitigando posibles vulnerabilidades.
+Asegurar que la solución cumpla con los estándares y regulaciones aplicables en materia de protección de datos, como el RGPD (Reglamento General de Protección de Datos) o la CCPA (California Consumer Privacy Act).
+Esta solución mejorada integra la gestión de errores y la seguridad de los datos en el diseño e implementación, garantizando la integridad, confidencialidad y disponibilidad de los datos
+
+
+Flujo de integracion continua (Opcional) 
