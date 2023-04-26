@@ -5,7 +5,8 @@ from pyspark.sql.types import BooleanType, StructType, StructField, IntegerType,
 
 #Este es un ejemplo de codigo, puedo crear variaciones a necesidad del cliente, etc... solo quise hacer una abstraccion del problema propuesto
 #El codigo es funcional pero se deben modificar todas las rutas tanto de los servidores como de los id de GCP
-#Ademas se deben agregar las claves de API necesarias
+#Ademas se deben agregar las claves de API necesarias asi como ambientar la maquina donde se ejecutara
+#para utilizar Spark, es necesario agregar hadoop_home variable de entorno para ejecutar en windows
 
 class CustomerDataIntegration:
     def __init__(self, input_schemas_file, output_schemas_file):
