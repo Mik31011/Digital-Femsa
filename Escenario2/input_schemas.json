@@ -1,0 +1,86 @@
+{
+    "Oracle": {
+        "fields": [
+            {
+                "name": "customer_id",
+                "type": "integer"
+            },
+            {
+                "name": "first_name",
+                "type": "string"
+            },
+            {
+                "name": "last_name",
+                "type": "string"
+            },
+            {
+                "name": "email",
+                "type": "string"
+            },
+            {
+                "name": "phone_number",
+                "type": "string"
+            },
+            {
+                "name": "birth_date",
+                "type": "date"
+            }
+        ]
+    },
+    "SQLServer": {
+        "fields": [
+            {
+                "name": "client_id",
+                "type": "integer"
+            },
+            {
+                "name": "first_name",
+                "type": "string"
+            },
+            {
+                "name": "last_name",
+                "type": "string"
+            },
+            {
+                "name": "email_address",
+                "type": "string"
+            },
+            {
+                "name": "phone",
+                "type": "string"
+            },
+            {
+                "name": "date_of_birth",
+                "type": "date"
+            }
+        ]
+    },
+    "MySQL": {
+        "fields": [
+            {
+                "name": "cust_id",
+                "type": "integer"
+            },
+            {
+                "name": "given_name",
+                "type": "string"
+            },
+            {
+                "name": "family_name",
+                "type": "string"
+            },
+            {
+                "name": "mail",
+                "type": "string"
+            },
+            {
+                "name": "telephone",
+                "type": "string"
+            },
+            {
+                "name": "dob",
+                "type": "date"
+            }
+        ]
+    }
+}

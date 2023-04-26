@@ -1,0 +1,30 @@
+{
+    "Centralized_Customers": {
+        "fields": [
+            {
+                "name": "customer_id",
+                "type": "integer"
+            },
+            {
+                "name": "first_name",
+                "type": "string"
+            },
+            {
+                "name": "last_name",
+                "type": "string"
+            },
+            {
+                "name": "email",
+                "type": "string"
+            },
+            {
+                "name": "phone_number",
+                "type": "string"
+            },
+            {
+                "name": "birth_date",
+                "type": "date"
+            }
+        ]
+    }
+}
