@@ -3,6 +3,9 @@ from pyspark.sql import SparkSession
 from pyspark.sql.functions import col, length, when
 from pyspark.sql.types import BooleanType, StructType, StructField, IntegerType, StringType, DateType
 
+#Este es un ejemplo de codigo, puedo crear variaciones a necesidad del cliente, etc... solo quise hacer una abstraccion del problema propuesto
+#El codigo es funcional pero se deben modificar todas las rutas tanto de los servidores como de los id de GCP
+#Ademas se deben agregar las claves de API necesarias
 
 class CustomerDataIntegration:
     def __init__(self, input_schemas_file, output_schemas_file):
@@ -93,24 +96,24 @@ class CustomerDataIntegration:
             .save()
 
 
-def main(self):
-    # Leer datos de las bases de datos de origen (Oracle, SQL Server, MySQL)
-    oracle_df = self.read_data("Oracle", "jdbc", {"url": "jdbc:oracle:thin:@//your_oracle_host:1521/your_sid",
-                               "dbtable": "oracle_customers", "user": "username", "password": "password", "driver": "oracle.jdbc.driver.OracleDriver"})
-    sqlserver_df = self.read_data("SQLServer", "jdbc", {"url": "jdbc:sqlserver://your_sqlserver_host:1433;databaseName=your_database",
-                                  "dbtable": "sqlserver_customers", "user": "username", "password": "password", "driver": "com.microsoft.sqlserver.jdbc.SQLServerDriver"})
-    mysql_df = self.read_data("MySQL", "jdbc", {"url": "jdbc:mysql://your_mysql_host:3306/your_database",
-                              "dbtable": "mysql_customers", "user": "username", "password": "password", "driver": "com.mysql.jdbc.Driver"})
+    def main(self):
+        # Leer datos de las bases de datos de origen (Oracle, SQL Server, MySQL)
+        oracle_df = self.read_data("Oracle", "jdbc", {"url": "jdbc:oracle:thin:@//your_oracle_host:1521/your_sid",
+                                    "dbtable": "oracle_customers", "user": "username", "password": "password", "driver": "oracle.jdbc.driver.OracleDriver"})
+        sqlserver_df = self.read_data("SQLServer", "jdbc", {"url": "jdbc:sqlserver://your_sqlserver_host:1433;databaseName=your_database",
+                                    "dbtable": "sqlserver_customers", "user": "username", "password": "password", "driver": "com.microsoft.sqlserver.jdbc.SQLServerDriver"})
+        mysql_df = self.read_data("MySQL", "jdbc", {"url": "jdbc:mysql://your_mysql_host:3306/your_database",
+                                "dbtable": "mysql_customers", "user": "username", "password": "password", "driver": "com.mysql.jdbc.Driver"})
 
-    # Transformar y validar datos
-    transformed_data = self.transform_data(oracle_df, sqlserver_df, mysql_df)
+        # Transformar y validar datos
+        transformed_data = self.transform_data(oracle_df, sqlserver_df, mysql_df)
 
-    # Escribir datos en BigQuery
-    self.write_data(
-        transformed_data, "your-gcp-project-id:your-bigquery-dataset.centralized_customers")
+        # Escribir datos en BigQuery
+        self.write_data(
+            transformed_data, "your-gcp-project-id:your-bigquery-dataset.centralized_customers")
 
-    # Detener la sesión de Spark
-    self.spark.stop()
+        # Detener la sesión de Spark
+        self.spark.stop()
 
 
 if __name__ == "__main__":
