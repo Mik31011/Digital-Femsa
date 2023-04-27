@@ -1,0 +1,19 @@
+Para poder ejecutar el archivo main.py es necesario tener python instalado y en la consola escribir
+pip install -r "requirements.txt"
+
+una vez ejecutado, ubicarse en la carpeta donde se encuentra el archivo y ejecutarlo con
+python main.py
+
+Los siguientes scripts son unicamente un ejemplo de una propuesta para el problema planteado
+Dado que en el mundo real este tipo de problemas tiene muchas variantes asi como necesidades muy especificaas
+solo cree algo general.
+
+En el archivo databases.py se crea informacion de manera aleatoria que cumpla con los escenarios propuestos en el ejercicio.
+En el archivo datanormalization.py cree el codigo necesario para centralizar y enriquecer la informacion original, cabe destacar que, en un caso real,
+el proceso de enriquecimiento y centralizacion puede llegar a ser muy complejo, en este caso solo se realiza de forma aleatoria
+En el archivo model.ipynb, usamos jupyter y python para poder crear un modelo que utiliza la arquitectura de vecinos mas cercanos
+para poder realizar las sugerencias basado en el enriquecimiento de la informacion, se agrega una preview del resultado del modelo
+y se exporta para su posterior uso.
+En el archivo main.py tenemos una interfaz muy sencilla con el fin de imitar de manera simple el problema que se postula en el ejercicio,
+podemos observar que al interactuar con la interfaz, el modelo se encuentra implementado y realizando las sugerencias pertinentes.
+
